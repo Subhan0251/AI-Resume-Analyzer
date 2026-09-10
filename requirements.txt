@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+python-multipart
+python-docx
+PyMuPDF
+pdfplumber
+pytesseract
+Pillow
+spacy
+pyresparser
+nltk
+langchain 
+langchain-openai 
+pydantic   
+python-dotenv       
+langsmith
