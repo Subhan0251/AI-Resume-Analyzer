@@ -97,34 +97,56 @@ No frontend bundler, npm dependency installation, vector database, or OCR engine
 
 ### Prerequisites
 
-- **Python 3.13** (the tested version) and pip.
+- **Python 3.10+**; development validation used Python 3.13.
 - Git, or a downloaded copy of this repository.
 - An OpenAI API key and access to a model compatible with the application's structured-output requests.
-- Node.js 22+ and Chrome/Edge only if running the optional browser checks.
 
-Download this repository or clone it using its GitHub clone URL, then open a terminal in the project root—the directory containing `app.py`.
+### 1. Get the source
 
-### Windows PowerShell
+```bash
+git clone https://github.com/Subhan0251/Matchpoint-AI-Resume-Analyzer.git
+cd Matchpoint-AI-Resume-Analyzer.git
+```
+
+### 2. Create an environment and install libraries
+
+**Windows — PowerShell**
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-Copy-Item .env.example .env
+.venv\Scripts\python.exe -m pip install --upgrade pip
+.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-### macOS / Linux
+Using the environment's Python directly avoids needing to activate it or change PowerShell execution policy.
+
+**macOS / Linux**
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+`requirements.txt` contains the runtime libraries. The frontend needs no `npm install` or build command.
+
+### 3. Configure your API key
+
+Create `.env` from the template only if you do not already have one:
+
+```powershell
+# Windows
 cp .env.example .env
 ```
 
-The commands use the virtual environment directly, so activation is optional. Only copy `.env.example` for a new setup; preserve an existing `.env`. Dependency versions are pinned in `requirements.txt`. Windows is the tested development environment; the POSIX commands are equivalent setup instructions.
+```bash
+# macOS / Linux
+cp .env.example .env
+```
 
-### Configure environment variables
 
-Edit `.env` locally:
+Edit `.env` locally and copy the following:
 
 ```dotenv
 OPENAI_API_KEY=your-provider-api-key
