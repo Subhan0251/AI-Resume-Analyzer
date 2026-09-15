@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Compare your CV with a job description and find concrete ways to improve its relevance.">
+  <title>Matchpoint — Make your next move count</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23c0ff45'/%3E%3Cpath d='M9 28V12l11 11 11-11v16' fill='none' stroke='%23101010' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <aside class="sidebar" aria-label="Workspace navigation">
+    <a class="brand" href="/" aria-label="Matchpoint home"><span class="brand-mark" aria-hidden="true">m<span>↗</span></span>matchpoint<span class="brand-dot">.</span></a>
+    <div class="sidebar-body">
+      <p class="nav-label">YOUR WORKSPACE</p>
+      <a class="nav-link active" href="#workspace" aria-current="page"><span aria-hidden="true">▧</span> Resume analyzer <span class="nav-arrow" aria-hidden="true">↗</span></a>
+      <div class="sidebar-note"><span class="small-cross" aria-hidden="true">✳</span><p>A better fit starts<br>with a clearer picture.</p><span class="muted">One CV. One opportunity.<br>A more intentional application.</span></div>
+    </div>
+    <div class="sidebar-bottom">
+      <button class="settings-button" id="open-settings" type="button"><span aria-hidden="true">⚙</span> Access settings <span class="connection-dot" id="connection-dot" aria-hidden="true"></span></button>
+      <span class="sidebar-foot">Built for your next chapter.</span>
+    </div>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar"><span class="breadcrumb">Workspace <span>/</span> <strong>Resume analyzer</strong></span><button type="button" class="theme-button" id="theme-toggle" aria-label="Switch to light theme" aria-pressed="false"><span id="theme-icon" aria-hidden="true">☀</span><span id="theme-label">Light mode</span></button></header>
+    <main id="main">
+      <section class="hero" aria-labelledby="page-title">
+        <div><div class="eyebrow"><span class="live-dot" aria-hidden="true"></span> YOUR EXPERIENCE. THE RIGHT OPPORTUNITY.</div><h1 id="page-title">Make your next<br>move <span>count.</span></h1><p class="hero-description">See how your CV aligns with the job you want.<br class="desktop-break"> Find the gaps. Make every application more intentional.</p></div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span class="art-arrow">↗</span><span class="art-tag">FIND YOUR FIT</span></div>
+      </section>
+
+      <div class="workspace-grid" id="workspace">
+        <section aria-labelledby="workspace-title">
+          <div class="section-heading"><h2 id="workspace-title">Your next opportunity</h2><span class="subtle-label">LET’S CONNECT THE DOTS</span></div>
+          <form id="analysis-form" novalidate>
+            <fieldset id="input-fields">
+              <legend class="sr-only">CV and job description</legend>
+              <section class="card input-card">
+                <div class="card-heading"><div class="step-number">01</div><div><h3>Your CV</h3><p>The experience you bring to the table.</p></div><span class="required-tag">Required</span></div>
+                <label class="dropzone" id="dropzone" for="resume-file">
+                  <input type="file" id="resume-file" name="file" accept=".pdf,.docx" aria-describedby="file-help file-error">
+                  <span class="upload-icon" aria-hidden="true">↥</span><strong>Drop your CV here, or <span>browse files</span></strong><span id="file-help">Text-based PDF or DOCX · Up to 10 MB</span>
+                </label>
+                <div id="selected-file" class="selected-file" hidden><span class="file-symbol" aria-hidden="true">▤</span><div><strong id="file-name"></strong><span id="file-size"></span></div><button id="remove-file" class="text-button" type="button" aria-label="Remove selected CV">Remove</button></div>
+                <p class="field-error" id="file-error" hidden></p>
+                <p class="input-note">Use a document with selectable text. Scans and image-based resumes aren’t supported.</p>
+              </section>
+
+              <section class="card input-card jd-card">
+                <div class="card-heading"><div class="step-number">02</div><div><h3>The job description</h3><p>The opportunity you’re working toward.</p></div><span class="required-tag">Required</span></div>
+                <label class="sr-only" for="job-description">Job description (required)</label>
+                <textarea id="job-description" name="job_description" rows="9" maxlength="20000" required placeholder="Paste the job description here…&#10;&#10;Include the role’s responsibilities, required skills, and qualifications for a meaningful comparison." aria-describedby="jd-help jd-error jd-count"></textarea>
+                <div class="textarea-footer"><span id="jd-help">We validate the JD before analyzing your CV.</span><span id="jd-count">0 / 20,000</span></div>
+                <p class="field-error" id="jd-error" hidden></p>
+              </section>
+            </fieldset>
+            <div class="feedback error-banner" id="request-error" role="alert" tabindex="-1" hidden></div>
+            <div class="feedback progress-banner" id="progress" role="status" aria-live="polite" hidden><span class="spinner" aria-hidden="true"></span><div><strong>Working on your comparison…</strong><p>Validating the JD, reviewing your CV, and finding improvements. This may take a few minutes.</p><span id="elapsed">0 seconds elapsed</span></div></div>
+            <button class="primary-button analyze-button" id="analyze-button" type="submit"><span id="analyze-label">Analyze my fit</span><span aria-hidden="true">↗</span></button>
+            <p class="consent-note">Your CV and JD are sent to the configured AI provider for analysis.<br>The complete report, including extracted CV text and the JD, is saved to keep repeat results consistent.</p>
+          </form>
+        </section>
+
+        <aside class="guide-column" aria-label="What to expect">
+          <section class="card guide-card"><span class="guide-eyebrow">LESS GUESSWORK. MORE DIRECTION.</span><h2>Know where<br>you stand.</h2><p>A focused look at what connects your experience to the role.</p><ol class="benefits"><li><span aria-hidden="true">◎</span><div><h3>Understand your fit</h3><p>Compare duties, skills, experience, and qualifications with the job’s requirements.</p></div></li><li><span aria-hidden="true">⌁</span><div><h3>Find what’s missing</h3><p>See which requirements need more evidence or development.</p></div></li><li><span aria-hidden="true">↗</span><div><h3>Refine your story</h3><p>Use grounded suggestions to present your experience honestly.</p></div></li></ol><div class="guide-bottom"><span aria-hidden="true">✳</span> Your experience. Better expressed.</div></section>
+          <section class="sample-card"><div><span class="subtle-label">TAKE A LOOK FIRST</span><h3>Curious about the results?</h3><p>Explore an example before you upload.</p></div><button type="button" id="sample-button" class="secondary-button">Preview sample report <span aria-hidden="true">↗</span></button></section>
+          <p class="honesty-note">A relevance score is a guide, not a hiring prediction. Your experience is more than a number.</p>
+        </aside>
+      </div>
+
+      <section id="results" class="results" aria-labelledby="results-title" hidden>
+        <div class="results-heading"><div><div class="eyebrow" id="report-eyebrow">YOUR COMPARISON</div><h2 id="results-title" tabindex="-1">A clearer picture.</h2><p id="report-context"></p></div><div class="report-actions"><button id="export-button" class="secondary-button" type="button">Download PDF <span aria-hidden="true">↓</span></button><button id="reset-button" class="text-button" type="button">Start fresh ↗</button></div></div>
+        <div class="sample-banner" id="sample-banner" hidden>Sample report · Illustrative data only. This is not an analysis of your CV.</div>
+        <div class="score-layout"><article class="card overall-card"><div class="score-ring" id="score-ring"><div><strong id="overall-score">—</strong><span>% supported</span></div></div><div><span class="guide-eyebrow">REQUIRED-CRITERIA COVERAGE</span><h3 id="score-heading">Required criteria supported</h3><p>The share of required criteria supported by CV evidence. This is not a hiring probability.</p></div></article><div class="subscores" id="subscores"></div></div>
+        <div class="section-heading gap-heading"><h3>Make your next revision count.</h3><span class="subtle-label" id="gap-count"></span></div>
+        <div class="gap-grid" id="gap-list"></div>
+        <div class="gap-controls"><button class="secondary-button" id="more-gaps" type="button" hidden>Show 6 more</button><button class="text-button" id="all-gaps" type="button" hidden>Show all gaps</button></div>
+        <section class="card insights-panel"><h3>Understand every assessment.</h3><p>Explore the exact JD requirements, quoted CV evidence, and assessment rules. No evidence in your CV does not mean you lack a capability.</p><button class="secondary-button" id="insights-button" type="button" aria-expanded="false" aria-controls="insights-content">View insights</button><div id="insights-content" hidden></div></section>
+        <details class="card parsed-details"><summary>What we read from your CV <span aria-hidden="true">+</span></summary><div id="parsed-content" class="parsed-content"></div></details>
+      </section>
+      <footer class="page-footer"><span class="footer-brand">matchpoint.</span><span>Make the connection. Take the next step.</span><span>CV × OPPORTUNITY</span></footer>
+    </main>
+  </div>
+
+  <dialog id="access-dialog" aria-labelledby="access-title" aria-describedby="access-description"><form id="access-form"><div class="dialog-heading"><span class="step-number" aria-hidden="true">↗</span><button class="icon-button" id="close-settings" aria-label="Close access settings" type="button">×</button></div><h2 id="access-title">Connect your workspace.</h2><p id="access-description">Enter your application access key to run a comparison. Your workspace owner can provide it.</p><label for="access-key">Access key</label><input id="access-key" type="password" autocomplete="off" spellcheck="false" required placeholder="Enter your access key"><p class="input-note">Kept only in this tab’s memory. Reloading clears it.</p><p id="access-status" class="input-note" role="status"></p><button class="primary-button" type="submit">Use this key <span aria-hidden="true">↗</span></button><button id="clear-key" type="button" class="text-button">Forget access key</button></form></dialog>
+  <div id="announcement" class="sr-only" aria-live="polite"></div>
+</body>
+</html>

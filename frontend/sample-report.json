@@ -1,0 +1,342 @@
+{
+  "sample": true,
+  "status": "success",
+  "filename": "example-operations-cv.pdf",
+  "session_id": "sample-not-saved",
+  "score_type": "required_criteria_coverage",
+  "match_score": 25,
+  "scorecard": {
+    "rubric_version": "coverage-1",
+    "rubric": {
+      "supported": "The quoted CV evidence explicitly addresses all material parts of this requirement. This is a document claim, not independent verification.",
+      "partially_supported": "Relevant evidence addresses only part of the requirement, or falls short of its stated scope or threshold.",
+      "mentioned_only": "The capability is named, but the quote does not establish the experience or qualification requested.",
+      "not_evidenced": "No supporting CV passage was identified. This does not mean the candidate lacks the capability.",
+      "unclear": "The evidence is ambiguous, missing from the assessment, or could not be verified; no supported credit is awarded."
+    },
+    "criteria": [
+      {
+        "id": "criterion-1",
+        "requirement": "Coordinate team schedules",
+        "importance": "required",
+        "category": "responsibility",
+        "status": "supported",
+        "reason": "The quoted CV evidence explicitly addresses all material parts of this requirement. This is a document claim, not independent verification.",
+        "jd_evidence": {
+          "quote": "Coordinate team schedules",
+          "line": 1,
+          "start": 0,
+          "end": 25
+        },
+        "cv_evidence": [
+          {
+            "quote": "Coordinated weekly schedules for a team of eight.",
+            "line": 1,
+            "start": 0,
+            "end": 49,
+            "kind": "work"
+          }
+        ],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-2",
+        "requirement": "Process supplier invoices",
+        "importance": "required",
+        "category": "responsibility",
+        "status": "supported",
+        "reason": "The quoted CV evidence explicitly addresses all material parts of this requirement. This is a document claim, not independent verification.",
+        "jd_evidence": {
+          "quote": "Process supplier invoices",
+          "line": 2,
+          "start": 0,
+          "end": 25
+        },
+        "cv_evidence": [
+          {
+            "quote": "Processed supplier invoices and maintained payment records.",
+            "line": 2,
+            "start": 0,
+            "end": 59,
+            "kind": "work"
+          }
+        ],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-3",
+        "requirement": "Handle customer enquiries",
+        "importance": "required",
+        "category": "responsibility",
+        "status": "mentioned_only",
+        "reason": "The capability is named, but the quote does not establish the experience or qualification requested.",
+        "jd_evidence": {
+          "quote": "Handle customer enquiries",
+          "line": 3,
+          "start": 0,
+          "end": 25
+        },
+        "cv_evidence": [
+          {
+            "quote": "Skills: customer service.",
+            "line": 3,
+            "start": 0,
+            "end": 25,
+            "kind": "listing"
+          }
+        ],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-4",
+        "requirement": "Prepare monthly financial reports",
+        "importance": "required",
+        "category": "responsibility",
+        "status": "not_evidenced",
+        "reason": "No supporting CV passage was identified. This does not mean the candidate lacks the capability.",
+        "jd_evidence": {
+          "quote": "Prepare monthly financial reports",
+          "line": 4,
+          "start": 0,
+          "end": 33
+        },
+        "cv_evidence": [],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-5",
+        "requirement": "Maintain accurate inventory records",
+        "importance": "required",
+        "category": "responsibility",
+        "status": "not_evidenced",
+        "reason": "No supporting CV passage was identified. This does not mean the candidate lacks the capability.",
+        "jd_evidence": {
+          "quote": "Maintain accurate inventory records",
+          "line": 5,
+          "start": 0,
+          "end": 35
+        },
+        "cv_evidence": [],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-6",
+        "requirement": "Two years in office administration",
+        "importance": "required",
+        "category": "experience",
+        "status": "unclear",
+        "reason": "The evidence is ambiguous, missing from the assessment, or could not be verified; no supported credit is awarded.",
+        "jd_evidence": {
+          "quote": "Two years in office administration",
+          "line": 6,
+          "start": 0,
+          "end": 34
+        },
+        "cv_evidence": [
+          {
+            "quote": "Office assistant, dates not provided.",
+            "line": 6,
+            "start": 0,
+            "end": 37,
+            "kind": "listing"
+          }
+        ],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-7",
+        "requirement": "A bookkeeping qualification",
+        "importance": "required",
+        "category": "education",
+        "status": "not_evidenced",
+        "reason": "No supporting CV passage was identified. This does not mean the candidate lacks the capability.",
+        "jd_evidence": {
+          "quote": "A bookkeeping qualification",
+          "line": 7,
+          "start": 0,
+          "end": 27
+        },
+        "cv_evidence": [],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-8",
+        "requirement": "Maintain confidential records",
+        "importance": "required",
+        "category": "responsibility",
+        "status": "not_evidenced",
+        "reason": "No supporting CV passage was identified. This does not mean the candidate lacks the capability.",
+        "jd_evidence": {
+          "quote": "Maintain confidential records",
+          "line": 8,
+          "start": 0,
+          "end": 29
+        },
+        "cv_evidence": [],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-9",
+        "requirement": "Experience organizing events",
+        "importance": "preferred",
+        "category": "responsibility",
+        "status": "not_evidenced",
+        "reason": "No supporting CV passage was identified. This does not mean the candidate lacks the capability.",
+        "jd_evidence": {
+          "quote": "Experience organizing events",
+          "line": 9,
+          "start": 0,
+          "end": 28
+        },
+        "cv_evidence": [],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-10",
+        "requirement": "Proficiency with spreadsheets",
+        "importance": "preferred",
+        "category": "skill",
+        "status": "mentioned_only",
+        "reason": "The capability is named, but the quote does not establish the experience or qualification requested.",
+        "jd_evidence": {
+          "quote": "Proficiency with spreadsheets",
+          "line": 10,
+          "start": 0,
+          "end": 29
+        },
+        "cv_evidence": [
+          {
+            "quote": "Skills: spreadsheets.",
+            "line": 10,
+            "start": 0,
+            "end": 21,
+            "kind": "listing"
+          }
+        ],
+        "unresolved_parts": []
+      },
+      {
+        "id": "criterion-11",
+        "requirement": "First aid certification",
+        "importance": "preferred",
+        "category": "credential",
+        "status": "not_evidenced",
+        "reason": "No supporting CV passage was identified. This does not mean the candidate lacks the capability.",
+        "jd_evidence": {
+          "quote": "First aid certification",
+          "line": 11,
+          "start": 0,
+          "end": 23
+        },
+        "cv_evidence": [],
+        "unresolved_parts": []
+      }
+    ],
+    "method": "100 * supported required criteria / all required criteria. Preferred criteria count separately.",
+    "required": {
+      "total": 8,
+      "supported": 2,
+      "partially_supported": 0,
+      "mentioned_only": 1,
+      "not_evidenced": 4,
+      "unclear": 1,
+      "coverage": 25
+    },
+    "preferred": {
+      "total": 3,
+      "supported": 0,
+      "partially_supported": 0,
+      "mentioned_only": 1,
+      "not_evidenced": 2,
+      "unclear": 0,
+      "coverage": 0
+    },
+    "unspecified": {
+      "total": 0,
+      "supported": 0,
+      "partially_supported": 0,
+      "mentioned_only": 0,
+      "not_evidenced": 0,
+      "unclear": 0,
+      "coverage": null
+    }
+  },
+  "gaps": [
+    {
+      "criterion_id": "criterion-3",
+      "missing_skill": "Handle customer enquiries",
+      "importance": "required",
+      "suggestion": "If you have practical evidence, add a concrete example of when and how you used this capability. Include outcomes only if they are true and verifiable.",
+      "evidence_quote": "Skills: customer service."
+    },
+    {
+      "criterion_id": "criterion-4",
+      "missing_skill": "Prepare monthly financial reports",
+      "importance": "required",
+      "suggestion": "If you meet this requirement, add the relevant experience or qualification to your CV. If you do not, treat it as a development need rather than adding an unsupported claim.",
+      "evidence_quote": null
+    },
+    {
+      "criterion_id": "criterion-5",
+      "missing_skill": "Maintain accurate inventory records",
+      "importance": "required",
+      "suggestion": "If you meet this requirement, add the relevant experience or qualification to your CV. If you do not, treat it as a development need rather than adding an unsupported claim.",
+      "evidence_quote": null
+    },
+    {
+      "criterion_id": "criterion-6",
+      "missing_skill": "Two years in office administration",
+      "importance": "required",
+      "suggestion": "Review this requirement and clarify the relevant evidence in your CV. Include exact scope, dates or qualification details where applicable; do not assume the requirement is met.",
+      "evidence_quote": "Office assistant, dates not provided."
+    },
+    {
+      "criterion_id": "criterion-7",
+      "missing_skill": "A bookkeeping qualification",
+      "importance": "required",
+      "suggestion": "If you meet this requirement, add the relevant experience or qualification to your CV. If you do not, treat it as a development need rather than adding an unsupported claim.",
+      "evidence_quote": null
+    },
+    {
+      "criterion_id": "criterion-8",
+      "missing_skill": "Maintain confidential records",
+      "importance": "required",
+      "suggestion": "If you meet this requirement, add the relevant experience or qualification to your CV. If you do not, treat it as a development need rather than adding an unsupported claim.",
+      "evidence_quote": null
+    },
+    {
+      "criterion_id": "criterion-9",
+      "missing_skill": "Experience organizing events",
+      "importance": "preferred",
+      "suggestion": "If you meet this requirement, add the relevant experience or qualification to your CV. If you do not, treat it as a development need rather than adding an unsupported claim.",
+      "evidence_quote": null
+    },
+    {
+      "criterion_id": "criterion-10",
+      "missing_skill": "Proficiency with spreadsheets",
+      "importance": "preferred",
+      "suggestion": "If you have practical evidence, add a concrete example of when and how you used this capability. Include outcomes only if they are true and verifiable.",
+      "evidence_quote": "Skills: spreadsheets."
+    },
+    {
+      "criterion_id": "criterion-11",
+      "missing_skill": "First aid certification",
+      "importance": "preferred",
+      "suggestion": "If you meet this requirement, add the relevant experience or qualification to your CV. If you do not, treat it as a development need rather than adding an unsupported claim.",
+      "evidence_quote": null
+    }
+  ],
+  "data": {
+    "parsed_fields": {
+      "contact": {
+        "name": "Alex Morgan (example)"
+      },
+      "summary": "Operations assistant (illustrative example)",
+      "skills": [
+        "scheduling",
+        "invoice processing"
+      ],
+      "experience": []
+    }
+  }
+}

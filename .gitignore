@@ -2,3 +2,12 @@
 .venv/
 __pycache__/
 sessions.db
+sessions.db-wal
+sessions.db-shm
+.coverage
+.artifacts/
+tests/__pycache__/
+FRONTEND_PLAN.md
+IMPLEMENTATION_PLAN.md
+PRODUCT_REQUIREMENTS.md
+REPOSITORY_REVIEW.md
