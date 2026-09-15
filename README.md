@@ -270,9 +270,3 @@ The current app supports local use and controlled shared-key workspaces. It does
 - **Scan rejected:** export the original document as a text-based PDF or upload its DOCX version.
 - **Frontend does not connect:** use the FastAPI URL rather than opening the HTML file directly.
 - **Database cannot open:** check that the configured parent directory exists and is writable.
-
-## Project notes
-
-[Product requirements](./PRODUCT_REQUIREMENTS.md), [implementation notes](./IMPLEMENTATION_PLAN.md), and [frontend plan](./FRONTEND_PLAN.md) record design decisions. [Repository cleanup review](./REPOSITORY_REVIEW.md) lists local artifacts and unused imports to review before publishing.
-
-No license file is currently included. Choose and add a license before presenting the repository as licensed for reuse.
